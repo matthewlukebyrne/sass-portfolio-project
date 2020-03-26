@@ -1,14 +1,23 @@
 {
   "name": "portfolio_website_sass",
   "version": "1.0.0",
-  "description": "",
+  "description": "SASS-Portfolio",
   "main": "index.js",
+  "dependencies": {
+    "node-sass": "^4.13.1"
+  },
+  "devDependencies": {},
   "scripts": {
     "sass": "node-sass -w scss/ -o dist/css --recursive"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matthewlukebyrne/sass-portfolio-project.git"
+  },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "node-sass": "^4.13.1"
-  }
+  "bugs": {
+    "url": "https://github.com/matthewlukebyrne/sass-portfolio-project/issues"
+  },
+  "homepage": "https://github.com/matthewlukebyrne/sass-portfolio-project#readme"
 }
