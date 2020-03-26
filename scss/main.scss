@@ -1,0 +1,382 @@
+// Imports
+@import "config";
+@import "util";
+@import "_item_grid";
+
+// Main Nav
+#main-nav {
+  display: flex;
+  // Logo on one side and items on the other
+  justify-content: space-between;
+  padding-top: 1.5rem;
+
+  // Main Nav Items / Flex Items
+  ul {
+    display: flex;
+  }
+
+  // Padding all round
+  li {
+    padding: 1rem 1.5rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    // Hover effect with a line over it, needs border bottom otherwise the text pushes up
+    border-bottom: 3px transparent solid;
+    // Smooth effect of the border color
+    transition: border-color 0.5s;
+
+    // Inside the a selector
+    &:hover {
+      border-color: $medium-color;
+    }
+
+    // Current link to have a border
+    &.current {
+      border-color: $main-color;
+    }
+  }
+}
+
+//  Header Home
+#header {
+  &-home {
+    background: $bg-image no-repeat 20% 30% / cover;
+    height: 100vh;
+    color: #ffffff;
+
+    // Header Content (Can get confusing with nesting slightly)
+    .header-content {
+      padding-top: 20%;
+
+      h1 {
+        font-size: 4rem;
+        line-height: 1.2;
+      }
+    }
+  }
+
+  &-inner {
+    // Change position of image
+    background: $bg-image no-repeat 20% 30% / cover;
+    height: 5.5rem;
+    border-bottom: 3px solid $main-color;
+  }
+}
+
+
+
+
+
+
+// <!-- Section A: Creative Process -->
+#home {
+  &-a {
+    // Set to be a grid with repeat columns of 4 with 1fr in fractions
+    .specials {
+      display: grid;
+      grid-gap: 2rem;
+      margin-bottom: 2rem;
+      // Repeat 4 times one fraction
+      grid-template-columns: repeat(4, 1fr);
+
+      .fas {
+        color: $main-color;
+        padding: 0.4rem;
+        padding-bottom: 2rem;
+      }
+    }
+  }
+
+  // <!-- Section B: Stats -->
+  &-b {
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+
+      li {
+        line-height: 2;
+
+        &.stats-title {
+          font-size: 1.5rem;
+        }
+
+        &.stats-number {
+          font-size: 2rem;
+          font-weight: bold;
+        }
+      }
+
+      div {
+        // Padding
+        padding: 3rem;
+
+        // Grabs the odds and evens
+        &:nth-child(odd) {
+          background: $light-color;
+        }
+
+        &:nth-child(even) {
+          background: $medium-color;
+        }
+      }
+    }
+  }
+
+  //     <!-- Section C: Process -->
+  &-c {
+    // Grid Process yet again
+    .process {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 1.5rem;
+      text-align: center;
+
+      //   Inside Nesting go within process on -step; icons
+      &-step {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 28px;
+        // Added Functionality with color from config with set-text-color
+        background: $light-color;
+        color: set-text-color($light-color);
+        border-radius: 50%;
+        height: 15px;
+        width: 15px;
+        line-height: 15px;
+        padding: 1rem;
+        transition: all 1s;
+      }
+
+      //   process-icon
+      &-icon {
+        border-radius: 50%;
+        background: $dark-color;
+        color: set-text-color($dark-color);
+        padding: 2rem;
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        text-align: center;
+        position: relative;
+        transition: all 1s;
+
+        //   Hover on Process Icons
+        &:hover {
+          background: $main-color;
+          width: 90px;
+          height: 90px;
+          line-height: 90px;
+
+          .process-step {
+            background: $dark-color;
+            color: set-text-color($dark-color);
+          }
+        }
+      }
+    }
+  }
+}
+
+// <!-- Section A: About Section -->
+#about {
+  &-a {
+    .about-info {
+      display: grid;
+      // Grid Template Areas is a visualization of how you want things set
+      grid-template-areas:
+        "bioimage bio bio"
+        "aw1 aw2 aw3";
+      grid-gap: 0.5rem;
+    }
+
+    // Grid Area
+    .bio-image {
+      // Assigning what is in template areas with bioimage
+      grid-area: bioimage;
+    }
+
+    .bio {
+      // Assigning what is in template areas with bio
+      grid-area: bio;
+      border-right: 3px solid $main-color;
+      padding: 0.8rem;
+    }
+
+    .award-1 {
+      grid-area: aw1;
+    }
+
+    .award-2 {
+      grid-area: aw2;
+    }
+
+    .award-3 {
+      grid-area: aw3;
+    }
+
+    .award-1 .fas,
+    .award-2 .fas,
+    .award-3 .fas {
+      color: $main-color;
+      margin: 1rem;
+    }
+  }
+
+  // <!-- Section B: Progress Bars -->
+  &-b {
+      .progress {
+      overflow: hidden;
+      height: 20px;
+      background: $medium-color;
+      border-radius: 4px;
+      margin: 0.6rem;
+
+      div {
+        height: 100%;
+        color: #fff;
+        text-align: center;
+        background: $main-color;
+      }
+    }
+  }
+
+  // About C - Logos
+  // &-c {
+  //   .about-logos {
+  //     display: grid;
+  //     grid-template-columns: repeat(4, 1fr);
+  //     grid-gap: 2rem;
+  //     color: $medium-color;
+
+  //     img {
+  //       width: 70%;
+  //     }
+  //   }
+  // }
+
+
+  // <!-- Section D: Testmonials -->
+  &-d {
+    .monials {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 0.5rem;
+
+      ul {
+        list-style: none;
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+      }
+
+      p {
+        border: 1px solid $main-color;
+        border-radius: 5px;
+        padding: 1rem;
+      }
+
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        padding-right: 1rem;
+      }
+    }
+  }
+}
+
+// <!-- Section A : Contact Deets -->
+#contact {
+  &-a {
+    .text-fields {
+      display: grid;
+      grid-template-areas:
+        "name email"
+        "subject phone"
+        "message message";
+      grid-gap: 1.2rem;
+      margin-bottom: 1.2rem;
+
+      // Need to name the class names associated with the input of the grid above
+      .name-input {
+        grid-area: name;
+      }
+      .subject-input {
+        grid-area: subject;
+      }
+      .email-input {
+        grid-area: email;
+      }
+      .phone-input {
+        grid-area: phone;
+      }
+      .message-input {
+        grid-area: message;
+        height: 300px;
+      }
+
+      // Adding padding for contact pages
+      .text-input {
+        padding: 0.5rem 1rem;
+      }
+    }
+  }
+
+  // <!-- Section B: Contact Info -->
+  &-b {
+    .contact-info {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      text-align: center;
+    }
+  }
+
+  // <!-- Section C: Tagline -->
+  &-c {
+    h1 {
+      text-align: center;
+      font-size: 2rem;
+    }
+  }
+}
+
+// <!-- Footer -->
+#main-footer {
+  background: $dark-color;
+  color: #fff;
+  height: 5rem;
+  width: 100%;
+  bottom: 0;
+
+  .footer-content {
+    display: flex;
+    justify-content: center;
+    height: 5rem;
+    align-items: center;
+
+    .social .fab {
+      margin-right: 1rem;
+      border: 2px #fff solid;
+      border-radius: 50%;
+      height: 20px;
+      width: 20px;
+      line-height: 20px;
+      text-align: center;
+      padding: 0.5rem;
+
+      &:hover {
+        //   Added Function from config class sass file
+        background: $dark-color;
+        color: set-text-color($dark-color);
+      }
+    }
+  }
+}
+
+// Import Media Queries 
+@import 'media';

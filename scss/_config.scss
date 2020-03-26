@@ -1,0 +1,17 @@
+// Variables (In SASS dont forget the colons!)
+$website-width: 1280px;
+$main-color: rgb(238, 16, 16);
+$light-color: #f4f4f4;
+$medium-color: #ccc;
+$dark-color: #000000;
+// Images are placed differently on SASS
+$bg-image: url("../img/showcase.png");
+
+// Set Text Color as a function
+@function set-text-color($color) {
+  @if (lightness($color) > 50) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}

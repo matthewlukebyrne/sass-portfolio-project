@@ -1,0 +1,193 @@
+// Centers on container
+.container {
+    max-width: $website-width;
+    padding: 0 1.5rem;
+    margin: auto;
+    overflow: hidden;
+}
+
+// btn-light button utility
+%btn-shared {
+    display: inline-block;
+    border-radius: 2rem;
+    padding: 0.8rem 2rem;
+    transition: all 0.5s;
+    border: none;
+    cursor: pointer;
+    font-weight: 1000;
+}
+
+// Extends all classes above
+.btn {
+    &-main {
+        @extend %btn-shared;
+        color: #333;
+        background-color: $main-color;
+
+    }
+
+    &-light {
+        @extend %btn-shared;
+        color: #333;
+        background-color: $light-color;
+    }
+
+    &-dark {
+        @extend %btn-shared;
+        color: #f4f4f4;
+        background-color: $dark-color;
+    }
+}
+
+// Anything that has the "btn-" "a" or "input" this will be in effect on hover for colors
+button[class^='btn-']:hover,
+a[class^='btn-']:hover,
+input[class^='btn-']:hover {
+    background-color: $main-color;
+  
+}
+
+
+// Backgrounds (All different background colors can contrast and adapt to the function in config class
+.bg {
+    &-main {
+        background: $main-color;
+        color: set-text-color($main-color);
+        transition: 3s ease;
+    }
+    &-dark {
+        background: $dark-color;
+        color: set-text-color($dark-color);
+    }
+    &-light {
+        background: $light-color;
+        color: set-text-color($light-color);
+    }
+    &-medium {
+        background: $medium-color;
+        color: set-text-color($medium-color);
+    }
+}
+
+.lead {
+    font-size: 1rem;
+    margin: 2rem;
+    font-weight: 500;
+}
+
+.text-center {
+    text-align: center;
+}
+
+// Title Shadow
+.txt-type {
+    text-shadow: 10px 10px 15px #333;
+}
+
+
+//     <!-- Section A: Specialise -->
+// Padding
+.py {
+    &-1 {
+        padding: 1rem;
+
+    }
+
+    &-2 {
+        padding: 1rem;
+
+    }
+
+    &-3 {
+        padding: 1rem;
+
+    }
+
+    &-4 {
+        padding: 1rem;
+
+    }
+}
+
+// Margin
+.my {
+    &-1 {
+        margin: 1rem;
+
+    }
+
+    &-2 {
+        margin: 1rem;
+
+    }
+
+    &-3 {
+        margin: 1rem;
+
+    }
+
+    &-4 {
+        margin: 1rem;
+
+    }
+}
+
+
+.section-title {
+    font-size: 2rem;
+    display: block;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    font-weight: 1000;
+    text-transform: uppercase;
+}
+
+
+.bottom-line {
+    height: 2px;
+    width: 4rem;
+    background: $main-color;
+    display: block;
+    margin: 0 auto 1rem auto;
+}
+
+//  General Styles
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.6;
+    background: #fff;
+  }
+  
+  a {
+    text-decoration: none;
+    color: $dark-color;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  h2,
+  h3,
+  h4 {
+    text-transform: uppercase;
+  }
+  
+  img {
+    width: 100%;
+  }
+  
+  // Logo
+  #logo {
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    text-transform: uppercase;
+  }
+
