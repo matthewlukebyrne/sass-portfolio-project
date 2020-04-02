@@ -3,7 +3,7 @@ SASS project portfolio website with JS typewriter function, CSS features includi
 
 ![Sass-Folio](demo/sass-folio.gif)
 
-<h1>Tour</h1>
+<h1>Layout</h1>
 
 ![Sass-Folio](demo/sass-folio-2.gif)
 
