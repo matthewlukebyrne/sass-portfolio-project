@@ -1,94 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://kit.fontawesome.com/3880792883.js"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/main.css" />
-    <title>Work</title>
-  </head>
 
-  <body>
-    <!-- Header -->
-    <!-- ID changed to header inner for config and util pages -->
-    <header id="header-inner">
-      <div class="container">
-        <!-- Main Logo and Links -->
-        <nav id="main-nav">
-          <a href="index.html"><img src="img/logo.png" alt="myPortfolio" id="logo"/></a>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="work.html" class="current">Work</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/3880792883.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/main.css" />
+  <title>Work</title>
+</head>
 
-    <!-- Section A: Gallery -->
-    <section id="work-a" class="text-center py-3">
-      <div class="container">
-        <h2 class="section-title">My Work</h2>
-        <div class="bottom-line"></div>
-        <p class="lead">
-          Check out some of my previous material...
-        </p>
-        <!-- Grid Layout -->
-        <div class="items">
-          <div class="item">
-            <div class="item-image">
-              <img src="img/items/item1.jpg" alt="" />
-            </div>
-            <div class="item-text">
-              <div class="item-text-wrap">
-                <p class="item-text-catergory">Web Design</p>
-                <h2 class="item-text-title">Visionaires</h2>
-              </div>
+<body>
+  <!-- Header -->
+  <!-- ID changed to header inner for config and util pages -->
+  <header id="header-inner">
+    <div class="container">
+      <!-- Main Logo and Links -->
+      <nav id="main-nav">
+        <a href="index.html"><img src="img/logo.png" alt="myPortfolio" id="logo" /></a>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="work.html" class="current">Work</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Section A: Gallery -->
+  <section id="work-a" class="text-center py-3 mb-5">
+    <div class="container">
+      <h2 class="section-title">My Work</h2>
+      <div class="bottom-line"></div>
+      <p class="lead">
+        Check out some of my previous material...
+      </p>
+      <!-- Grid Layout -->
+      <div class="items">
+        <div class="item">
+          <div class="item-image">
+            <img src="img/items/item1.jpg" alt="" />
+          </div>
+          <div class="item-text">
+            <div class="item-text-wrap">
+              <p class="item-text-catergory">Web Design</p>
+              <h2 class="item-text-title">Visionaires</h2>
             </div>
           </div>
-          <div class="item">
-            <div class="item-image">
-              <img src="img/items/item2.jpg" alt="" />
-            </div>
-            <div class="item-text">
-              <div class="item-text-wrap">
-                <p class="item-text-catergory">Multimedia</p>
-                <h2 class="item-text-title">Canine Carnage</h2>
-              </div>
+        </div>
+        <div class="item">
+          <div class="item-image">
+            <img src="img/items/item2.jpg" alt="" />
+          </div>
+          <div class="item-text">
+            <div class="item-text-wrap">
+              <p class="item-text-catergory">Multimedia</p>
+              <h2 class="item-text-title">Canine Carnage</h2>
             </div>
           </div>
-          <div class="item">
-            <div class="item-image">
-              <img src="img/items/item3.gif" alt="" />
-            </div>
-            <div class="item-text">
-              <div class="item-text-wrap">
-                <p class="item-text-catergory">Mobile Development</p>
-                <h2 class="item-text-title">Dr.Connect</h2>
-              </div>
+        </div>
+        <div class="item">
+          <div class="item-image">
+            <img src="img/items/item3.gif" alt="" />
+          </div>
+          <div class="item-text">
+            <div class="item-text-wrap">
+              <p class="item-text-catergory">Mobile Development</p>
+              <h2 class="item-text-title">Dr.Connect</h2>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer id="main-footer">
-      <div class="footer-content container">
-          <!-- Copyright symbol -->
-          <div class="social">
+
+  <!-- Section B: Progress Bars -->
+  <section id="about-b" class="bg-dark py-3">
+    <div class="container">
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="bottom-line"></div>
+      <h4>HTML5:</h4>
+      <div class="progress">
+        <!-- Using inline style here -->
+        <div style="width:70%"></div>
+      </div>
+      <h4>CSS3:</h4>
+      <div class="progress">
+        <!-- Using inline style here -->
+        <div style="width:80%"></div>
+      </div>
+      <h4>JavaScript(ECMAS6):</h4>
+      <div class="progress">
+        <!-- Using inline style here -->
+        <div style="width:50%"></div>
+      </div>
+      <h4>Adobe Suite:</h4>
+      <div class="progress">
+        <!-- Using inline style here -->
+        <div style="width:65%"></div>
+      </div>
+      <h4>Bootstrap4:</h4>
+      <div class="progress">
+        <!-- Using inline style here -->
+        <div style="width:69%"></div>
+      </div>
+      <h4>Python:</h4>
+      <div class="progress">
+        <!-- Using inline style here -->
+        <div style="width:55%"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <!-- <footer id="main-footer">
+      <div class="footer-content container"> -->
+  <!-- Copyright symbol -->
+  <!-- <div class="social">
               <a href="https://github.com/matthewlukebyrne"><i class="fab fa-github"></i></a>
               <a href="https://www.linkedin.com/in/matthewlukebyrne-1990/"><i class="fab fa-linkedin"></i></a>
           </div>
       </div>
-  </footer>
-  </body>
+  </footer> -->
+
+
+</body>
+
 </html>

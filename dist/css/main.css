@@ -130,7 +130,7 @@ img {
 
 .items {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   box-shadow: 5px 10px 10px 0 rgba(10, 4, 3, 0.5);
   margin: 0.5rem; }
 
@@ -366,8 +366,7 @@ img {
 #contact-a .text-fields {
   display: grid;
   grid-template-areas: "name email" "subject phone" "message message";
-  grid-gap: 1.2rem;
-  margin-bottom: 1.2rem; }
+  grid-gap: 1.2rem; }
   #contact-a .text-fields .name-input {
     grid-area: name; }
   #contact-a .text-fields .subject-input {
